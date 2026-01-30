@@ -2,7 +2,8 @@ import re
 import os
 from os import environ, getenv
 from Script import script
-
+ON_HEROKU = False
+PORT = int(os.environ.get("PORT", 10000))
 # Utility functions
 id_pattern = re.compile(r'^.\d+$')
 
